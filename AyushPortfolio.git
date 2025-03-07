@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Patel - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            background: url('https://source.unsplash.com/1600x900/?technology,dark') center/cover;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #1e1e1e;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+        section {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 900px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skill-card {
+            background: #00bcd4;
+            color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-card {
+            background: #333;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            color: white;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+        }
+        .contact-form button {
+            background: #00bcd4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Ayush Patel</h1>
+        <p>Master of Informatics | Information Security Management</p>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a graduate student at Northeastern University specializing in Information Security Management. Passionate about cybersecurity, software development, and automation.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">C++</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Java</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">MongoDB</div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Breast Cancer Prediction</h3>
+                <p>Developed a CNN-based mammographic lesion detection system with 92% accuracy.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const section = document.querySelector(this.getAttribute("href"));
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
